@@ -59,7 +59,7 @@ export default function Home() {
         const conversationHistory: ChatMessage[] = [
           {
             role: "system",
-            content: "You are a helpful assistant that generates Mermaid diagrams based on user requests."
+            content: "You are a helpful assistant from JoTkr that generates Mermaid diagrams based on user requests."
           },
           ...messages.map(msg => ({
             role: msg.role as "user" | "assistant",
@@ -127,7 +127,7 @@ export default function Home() {
     <main className="h-screen flex flex-col bg-background">
       <header className="glass border-b p-4 sticky top-0 z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <h1 className="gradient-text text-2xl font-bold">Mermaid Diagram Generator</h1>
+          <h1 className="gradient-text text-2xl font-bold">JoTkr Diagram Generator</h1>
           <Button 
             variant="outline" 
             size="sm" 
@@ -148,9 +148,9 @@ export default function Home() {
               <div className="flex items-center justify-center h-full text-center">
                 <div className="max-w-sm p-6 animate-fade-in">
                   <Sparkles className="h-10 w-10 mx-auto mb-4 text-primary opacity-80" />
-                  <h3 className="text-xl font-semibold mb-2 gradient-text">Welcome to Mermaid AI</h3>
+                  <h3 className="text-xl font-semibold mb-2 gradient-text">Welcome to JoTkr</h3>
                   <p className="text-muted-foreground mb-4">
-                    Describe the diagram you want to create, and I'll generate it for you using Google's Gemini AI.
+                    Describe the diagram you want to create, and I'll generate it for you using advanced AI.
                     You can also directly paste Mermaid code to visualize it.
                   </p>
                   <div className="glass rounded-lg p-4 text-sm mt-4">
@@ -183,7 +183,7 @@ export default function Home() {
                             <AvatarImage src="/bot-avatar.png" />
                             <AvatarFallback className="bg-primary text-primary-foreground">AI</AvatarFallback>
                           </Avatar>
-                          <span className="text-sm font-medium">Gemini AI</span>
+                          <span className="text-sm font-medium">JoTkr AI</span>
                         </div>
                       )}
                       <p className="mb-2">{message.content}</p>
