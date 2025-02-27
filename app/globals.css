@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+  :root {
   /* Modern color palette with deeper saturation and vibrance */
   --background: 210 40% 98%;
   --foreground: 222 47% 11%;
@@ -20,13 +20,13 @@
   /* Card, surface and input colors */
   --card: 0 0% 100%;
   --card-foreground: 222 47% 11%;
-  --popover: 0 0% 100%;
+    --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
-  
+
   /* Updated primary color with more vibrance */
   --primary: 221 83% 53%;
-  --primary-foreground: 210 40% 98%;
-  
+    --primary-foreground: 210 40% 98%;
+
   /* More defined secondary color */
   --secondary: 215 25% 27%;
   --secondary-foreground: 210 40% 98%;
@@ -39,7 +39,7 @@
   
   /* Alert and attention colors */
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 40% 98%;
   --success: 142 71% 45%;
   --success-foreground: 210 40% 98%;
   --warning: 38 92% 50%;
@@ -52,38 +52,38 @@
   
   /* Modern border radiuses */
   --radius-sm: 0.3rem;
-  --radius: 0.5rem;
+    --radius: 0.5rem;
   --radius-md: 0.7rem;
   --radius-lg: 1rem;
   --radius-full: 9999px;
-}
+  }
 
-.dark {
+  .dark {
   --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
-  
+    --foreground: 210 40% 98%;
+
   --glass-background: rgba(17, 25, 40, 0.75);
   --glass-border: rgba(255, 255, 255, 0.12);
-  
+
   --card: 222 47% 11%;
   --card-foreground: 210 40% 98%;
   --popover: 222 47% 11%;
-  --popover-foreground: 210 40% 98%;
-  
+    --popover-foreground: 210 40% 98%;
+
   --primary: 217 91% 60%;
   --primary-foreground: 222 47% 11%;
-  
+
   --secondary: 217 33% 17%;
-  --secondary-foreground: 210 40% 98%;
-  
+    --secondary-foreground: 210 40% 98%;
+
   --muted: 217 33% 17%;
   --muted-foreground: 215 20% 65%;
   --accent: 217 33% 17%;
-  --accent-foreground: 210 40% 98%;
-  
+    --accent-foreground: 210 40% 98%;
+
   --destructive: 0 63% 31%;
-  --destructive-foreground: 210 40% 98%;
-  
+    --destructive-foreground: 210 40% 98%;
+
   --border: 217 33% 17%;
   --input: 217 33% 17%;
   --ring: 224 76% 48%;
