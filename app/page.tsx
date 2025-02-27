@@ -250,6 +250,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
+      <footer className="py-2 px-4 text-center text-xs text-muted-foreground">
+        <p>
+          Made by <a href="https://josepht.in/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline underline-offset-2">Joseph Thekkekara</a>
+        </p>
+      </footer>
     </main>
   )
 }
