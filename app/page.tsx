@@ -3,10 +3,9 @@
 import { useState, useRef } from "react"
 import { MermaidDiagram } from "@/components/mermaid-diagram"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Send, Loader2, Code, Image, Trash2, Sparkles, RefreshCw, AlertCircle } from "lucide-react"
+import { Send, Loader2, Trash2, Sparkles, AlertCircle } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface Message {
