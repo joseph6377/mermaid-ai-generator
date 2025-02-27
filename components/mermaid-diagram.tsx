@@ -219,7 +219,7 @@ export function MermaidDiagram({ code }: MermaidDiagramProps) {
           variant="ghost" 
           size="icon" 
           onClick={downloadAsPng}
-          className="absolute top-2 right-2 h-8 w-8 rounded-full bg-white/80 dark:bg-gray-700/80 shadow-sm hover:bg-white dark:hover:bg-gray-700 opacity-70 group-hover:opacity-100 transition-opacity"
+          className="absolute top-2 right-2 z-10 h-8 w-8 rounded-full bg-white/80 dark:bg-gray-700/80 shadow-sm hover:bg-white dark:hover:bg-gray-700 opacity-70 group-hover:opacity-100 transition-opacity"
           title="Save as PNG"
           aria-label="Save as PNG"
         >

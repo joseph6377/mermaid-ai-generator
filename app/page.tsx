@@ -126,7 +126,7 @@ export default function Home() {
   return (
     <main className="h-screen flex flex-col bg-background">
       <header className="glass border-b p-4 sticky top-0 z-10">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="gradient-text text-2xl font-bold">Mermaid Diagram Generator</h1>
           <Button 
             variant="outline" 
@@ -140,9 +140,9 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="flex-1 container mx-auto p-4 overflow-hidden max-w-4xl">
+      <div className="flex-1 w-full px-4 sm:px-6 md:px-8 py-4 overflow-hidden">
         {/* Full-width Chat Interface */}
-        <div className="flex flex-col card glass h-full shadow-lg rounded-lg overflow-hidden">
+        <div className="flex flex-col card glass h-full shadow-lg rounded-lg overflow-hidden max-w-6xl mx-auto">
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.length === 0 ? (
               <div className="flex items-center justify-center h-full text-center">
@@ -169,7 +169,7 @@ export default function Home() {
                     }`}
                   >
                     <div
-                      className={`max-w-[85%] ${
+                      className={`max-w-[85%] md:max-w-[75%] lg:max-w-[65%] ${
                         message.role === "user"
                           ? "message-bubble message-user"
                           : message.error 
