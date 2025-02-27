@@ -5,8 +5,9 @@ import { MermaidDiagram } from "@/components/mermaid-diagram"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Send, Loader2, Trash2, Sparkles, AlertCircle } from "lucide-react"
+import { Send, Loader2, Trash2, Sparkles, AlertCircle, HelpCircle } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from "next/link"
 
 interface Message {
   role: "user" | "assistant"
@@ -128,15 +129,27 @@ export default function Home() {
       <header className="glass border-b p-4 sticky top-0 z-10">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="gradient-text text-2xl font-bold">JoTkr Diagram Generator</h1>
-          <Button 
-            variant="outline" 
-            size="sm" 
-            onClick={clearChat} 
-            className="flex gap-1 items-center glass hover:shadow-md transition-all duration-300"
-          >
-            <Trash2 className="h-4 w-4" />
-            <span>Clear Chat</span>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Link href="/help">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="flex gap-1 items-center glass hover:shadow-md transition-all duration-300"
+              >
+                <HelpCircle className="h-4 w-4" />
+                <span className="hidden sm:inline">Help</span>
+              </Button>
+            </Link>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={clearChat} 
+              className="flex gap-1 items-center glass hover:shadow-md transition-all duration-300"
+            >
+              <Trash2 className="h-4 w-4" />
+              <span>Clear Chat</span>
+            </Button>
+          </div>
         </div>
       </header>
 
