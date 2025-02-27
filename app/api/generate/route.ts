@@ -1,5 +1,4 @@
-import { google } from "@ai-sdk/google"
-import { generateText } from "ai"
+import { GoogleGenerativeAI } from "@google/generative-ai"
 import { NextResponse } from "next/server"
 
 interface Message {
@@ -43,7 +42,7 @@ export async function POST(request: Request) {
       3. Use double quotes around ALL node text, especially when it contains spaces.
       4. Avoid using special characters like quotes within node text; escape them if necessary.
       5. Each node connection should be on a separate line.
-      6. Use proper syntax for node shapes and styles.
+      6. Use proper node shapes and styles.
       7. Test your syntax mentally before returning it to make sure it's valid.
       
       Example of correct syntax:
@@ -54,12 +53,12 @@ export async function POST(request: Request) {
         C -->|No| E["Reject"]
     `
 
-    const { text } = await generateText({
-      model: google("gemini-1.5-pro-latest"),
-      prompt,
-      temperature: 0.3,
-      maxTokens: 2000,
-    })
+    // Initialize the Google Generative AI client directly
+    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GENERATIVE_AI_API_KEY || "")
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" })
+
+    const result = await model.generateContent(prompt)
+    const text = result.response.text()
 
     // Clean up the response to ensure it's just the mermaid code
     const cleanedDiagram = text
