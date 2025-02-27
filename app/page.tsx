@@ -106,14 +106,16 @@ export default function Home() {
     const canvas = document.createElement("canvas")
     const ctx = canvas.getContext("2d")
 
-    // Create an image to draw on canvas
-    const img = new Image()
-    img.crossOrigin = "anonymous"
-
     // Set dimensions based on SVG viewBox or size
     const svgRect = svgElement.getBoundingClientRect()
     canvas.width = svgRect.width * 2 // Higher resolution
     canvas.height = svgRect.height * 2
+
+    // Create an image to draw on canvas
+    const img = new window.Image()
+    img.width = svgRect.width * 2
+    img.height = svgRect.height * 2
+    img.crossOrigin = "anonymous"
 
     img.onload = () => {
       if (!ctx) return
@@ -174,8 +176,8 @@ export default function Home() {
               <div className="flex items-center justify-center h-full text-center text-muted-foreground">
                 <div className="max-w-sm">
                   <h3 className="text-lg font-medium mb-2">Welcome to Mermaid AI</h3>
-                  <p>Describe the diagram you want to create, and I'll generate it for you.</p>
-                  <p className="mt-2 text-sm">Try: "Create a flowchart showing user authentication process"</p>
+                  <p>Describe the diagram you want to create, and I&apos;ll generate it for you.</p>
+                  <p className="mt-2 text-sm">Try: &quot;Create a flowchart showing user authentication process&quot;</p>
                 </div>
               </div>
             ) : (
@@ -244,11 +246,11 @@ export default function Home() {
                     </TabsList>
                     <div className="flex gap-2">
                       <Button variant="outline" size="sm" onClick={downloadSVG}>
-                        <Image className="h-4 w-4 mr-2" />
+                        <Image className="h-4 w-4 mr-2" aria-hidden="true" />
                         SVG
                       </Button>
                       <Button variant="outline" size="sm" onClick={downloadPNG}>
-                        <Image className="h-4 w-4 mr-2" />
+                        <Image className="h-4 w-4 mr-2" aria-hidden="true" />
                         PNG
                       </Button>
                       <Button variant="outline" size="sm" onClick={downloadMermaidCode}>

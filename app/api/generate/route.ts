@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     let context = ""
     if (previousMessages.length > 0) {
       context = "Previous conversation and diagrams:\n"
-      previousMessages.forEach((message: Message, index: number) => {
+      previousMessages.forEach((message: Message) => {
         context += `${message.role === "user" ? "User" : "Assistant"}: ${message.content}\n`
         if (message.diagram) {
           context += `Previous diagram code: ${message.diagram}\n`
